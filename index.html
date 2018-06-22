@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Eater|Shrikhand" rel="stylesheet">
+        <title>Excuse Generator</title>
+    </head>
+    <body>
+        <style> 
+        body{
+            font-family: 'Shrikhand', cursive;
+        }
+        .display-4{
+            font-family: 'Eater', cursive;
+        }
+        </style>
+        <div class="container mt-5 text-center pt-5">
+            <h1>The Excuse Generator</h1>
+            </br>
+            </br>
+            <p id="excuse" class="display-4">My dog eat my homework</p>
+        </div>
+        
+        <script>
+            /*Arrays*/
+            let who = ['The dog','My granma','His turtle','My bird'];
+            let what = ['eat','pissed','crushed','broked'];
+            let when = ['before the class','right in time','when I finished','during my lunch','while I was praying'];
+    
+            /*Random*/
+            var randomWho = who[Math.floor(Math.random() * who.length)];
+            var randomWhat = what[Math.floor(Math.random() * what.length)];
+            var randomWhen = when[Math.floor(Math.random() * when.length)];
+            /*innerHtml*/
+            var excuse = document.getElementById("excuse");
+            /*Function new excuse*/
+            function newExcuse() {
+                excuse.innerHTML = randomWho + " " + randomWhat + " " + randomWhen;
+            }
+            /*Onload*/
+            window.onLoad = newExcuse();
+        </script>
+    </body>
+</html>
